@@ -1,11 +1,10 @@
 #Clase suma, implementando metodo "__init__" (Constructor)
-class Sumas:
-    def __init__(self,num1,num2):
-        self.numero1 = num1
-        self.numero2 = num2
+class Operaciones:
+    def __init__(self, n1, n2):
+        self.n1 = n1
+        self.n2 = n2
 
-#Metodo el cual me permite obtener la suma
-def ejecucion_suma(n1, n2):
-    result = n1+n2
-    return result
+    def suma(self):
+        result = self.n1 + self.n2
+        return result
 

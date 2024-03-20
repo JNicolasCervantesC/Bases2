@@ -1,16 +1,16 @@
 #Se importó la clase y el metodo de el archivo operaciones
-from operaciones import Sumas,ejecucion_suma
+from operaciones import Operaciones
 
 #Solicitu de variables por consola
 val1 = int(input("Ingresu su primer número: "))
 val2 = int(input("Ingrese su segundo número: "))
 
 #Creación del objeto de la clase tipo "Sumas"
-mi_suma = Sumas(val1,val2)
+operadores = Operaciones(n1=val1, n2=val2)
 
 #Llamado del metodo, donde se le pasan los valores que tomo el contructor para la
 #ejecución de la suma.
-total = ejecucion_suma(mi_suma.numero1,mi_suma.numero2)
+total = operadores.suma()
 
 #Impresion del resultado de la suma.
 print(total)
