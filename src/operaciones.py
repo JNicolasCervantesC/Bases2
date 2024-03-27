@@ -3,7 +3,6 @@ class Operaciones:
         self.n1 = n1
         self.n2 = n2
 
-
     def suma(self):
 
         if self.n1 != None and self.n2 != None:
@@ -60,6 +59,7 @@ class Operaciones:
             result = self.n1 / self.n2
 
         return result
+
 
 
 #arreglar las operaciones con los parametros inicializados en None
