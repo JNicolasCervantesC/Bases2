@@ -31,5 +31,5 @@ else:
     ec2 = trig.cos()
     print(ec2)
 
-
+#Exponencial y raiz
 
