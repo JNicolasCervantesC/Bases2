@@ -3,6 +3,17 @@ class Operaciones:
         self.n1 = n1
         self.n2 = n2
 
+    def ejecutar(self, tipo: str):
+        if tipo == "suma":
+            e1 = self.suma()
+        if tipo == "resta":
+            e1 = self.resta()
+        if tipo == "producto":
+            e1 = self.producto()
+        if tipo == "division":
+            e1 = self.division()
+        return e1
+
     def suma(self):
 
         if self.n1 != None and self.n2 != None:
@@ -57,5 +68,6 @@ class Operaciones:
 
 
 
-#arreglar las operaciones con los parametros inicializados en None
-#metodo 'ejeccurar', con una variablede de entrada con 4 nombres(operaciones), que retorne la operacion
+#arreglar metodos
+#unit test
+#new clas funciones

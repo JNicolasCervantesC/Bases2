@@ -1,7 +1,7 @@
 import unittest
 from operaciones import Operaciones
-
-def menu():
+from pruebas import *
+"""def menu():
 
     print("Escoja la tarea que desea realizar:")
     print("\n1)Suma\n2)Resta\n3)Producto\n4)Division\n")
@@ -43,5 +43,17 @@ while True:
     if op2 == 'M' or op2 == 'm':
         menu()
     if op2 == 'F' or op2 == 'f':
-        break
+        break"""
+
+"""ecu1 = Operaciones(4, 6, "resta")
+t1 = ecu1.ejecutar()
+print(t1)"""
+
+ecu1 = Operaciones(4, 6)
+t1 = ecu1.ejecutar(tipo="resta")
+print(t1)
+t2 = ecu1.ejecutar("division")
+print(t2)
+print(suma(4, 6))
+
 
