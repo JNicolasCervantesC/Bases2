@@ -8,13 +8,8 @@ class Operaciones:
         if self.n1 != None and self.n2 != None:
             result = self.n1 + self.n2
 
-        if self.n1 != None and self.n2 == None:
-            result = self.n1
-
-        if self.n1 == None and self.n2 != None:
-            result = self.n2
-
-        if self.n1 == None and self.n2 == None:
+        else:
+            print("Warning")
             result = None
 
         return result

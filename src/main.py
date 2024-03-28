@@ -1,3 +1,4 @@
+import unittest
 from operaciones import Operaciones
 
 def menu():
@@ -43,3 +44,4 @@ while True:
         menu()
     if op2 == 'F' or op2 == 'f':
         break
+
