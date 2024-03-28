@@ -1,22 +1,58 @@
 class Operaciones:
-    def __init__(self,
-                 n1: int = None,
-                 n2: int = None,
-                 n3: str = 'Hola'):
+    def __init__(self, n1: int = None, n2: int = None):
         self.n1 = n1
         self.n2 = n2
-        self.n3 = n3
+
+    def ejecutar(self, tipo: str):
+        if tipo == "suma":
+            e1 = self.suma()
+        if tipo == "resta":
+            e1 = self.resta()
+        if tipo == "producto":
+            e1 = self.producto()
+        if tipo == "division":
+            e1 = self.division()
+        return e1
 
     def suma(self):
-        result = self.n1 + self.n2
+
+        if self.n1 != None and self.n2 != None:
+            result = self.n1 + self.n2
+
+        else:
+            print("Warning")
+            result = None
+
         return result
 
     def resta(self):
-        result = self.n1 - self.n2
+        if self.n1 != None and self.n2 != None:
+            result = self.n1 - self.n2
+
+        if self.n1 != None and self.n2 == None:
+            result = self.n1
+
+        if self.n1 == None and self.n2 != None:
+            result = (self.n2*-1)
+
+        if self.n1 == None and self.n2 == None:
+            result = None
+
         return result
 
     def producto(self):
-        result = self.n1 * self.n2
+        if self.n1 != None and self.n2 != None:
+            result = self.n1 * self.n2
+
+        if self.n1 != None and self.n2 == None:
+            result = None
+
+        if self.n1 == None and self.n2 != None:
+            result = None
+
+        if self.n1 == None and self.n2 == None:
+            result = None
+
         return result
 
     def division(self):
@@ -31,5 +67,7 @@ class Operaciones:
         return result
 
 
-#arreglar las operaciones con los parametros inicializados en None
-#metodo 'ejeccurar', con una variablede de entrada con 4 nombres(operaciones), que retorne la operacion
+
+#arreglar metodos
+#unit test
+#new clas funciones

@@ -1,30 +1,59 @@
+import unittest
 from operaciones import Operaciones
+from pruebas import *
+"""def menu():
 
-from Trigonometricas import OperacionesT
-x = OperacionesT
-val1 = 3 #int(input("Ingresu su primer número: "))
-val2 = 0 #int(input("Ingrese su segundo número: "))
+    print("Escoja la tarea que desea realizar:")
+    print("\n1)Suma\n2)Resta\n3)Producto\n4)Division\n")
+    op = int(input("Ingrese su opcion: "))
 
-#Creación del objeto de la clase tipo "Sumas"
-operadores = Operaciones()
+    while op < 1 or op > 4:
+        print("Errod de digitacion.")
+        print("Escoja la tarea que desea realizar:")
+        print("\n1)Suma\n2)Resta\n3)Producto\n4)Division\n")
+        op = int(input("Ingrese su opcion: "))
 
-total1 = operadores.suma()
-#total2 = operadores.resta()
-#total3 = operadores.producto()
-#total4 = operadores.division()
-x =1
-print(total1)
-#print("[Suma: ", total1,"; Resta: ", total2,"; Producto: ", total3,"; Cociente: ", total4, "]")
+    if op == 1:
+        v1 = int(input("Ingrese su primer número: "))
+        v2 = int(input("Ingrese su segundo número: "))
+        accion1 = Operaciones(n1=v1, n2=v2)
+        print(accion1.suma())
+
+    if op == 2:
+        v1 = int(input("Ingrese su primer número: "))
+        v2 = int(input("Ingrese su segundo número: "))
+        accion2 = Operaciones(n1=v1, n2=v2)
+        print(accion2.resta())
+
+    if op == 3:
+        v1 = int(input("Ingrese su primer número: "))
+        v2 = int(input("Ingrese su segundo número: "))
+        accion3 = Operaciones(n1=v1, n2=v2)
+        print(accion3.producto())
+
+    if op == 4:
+        v1 = int(input("Ingrese su primer número: "))
+        v2 = int(input("Ingrese su segundo número: "))
+        accion4 = Operaciones(n1=v1, n2=v2)
+        print(accion4.division())
 
 
-#que es el init en una clase:
-#Constructor que me permite acceder a los atributos de la Clase.
+while True:
+    op2 = str(input("Presione 'M' para desplegar el menu o 'F' para finalizar:"))
+    if op2 == 'M' or op2 == 'm':
+        menu()
+    if op2 == 'F' or op2 == 'f':
+        break"""
 
-#agregar init a esta clase:
-#Completado.
+"""ecu1 = Operaciones(4, 6, "resta")
+t1 = ecu1.ejecutar()
+print(t1)"""
 
-#que es "self"
-#palabra reservada del contrucotor para referirse a un atributo de esa clase.
+ecu1 = Operaciones(4, 6)
+t1 = ecu1.ejecutar(tipo="resta")
+print(t1)
+t2 = ecu1.ejecutar("division")
+print(t2)
+print(suma(4, 6))
 
-#como compartir rama
-#commentarios
+
