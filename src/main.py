@@ -1,59 +1,24 @@
-import unittest
 from operaciones import Operaciones
 from pruebas import *
-"""def menu():
 
-    print("Escoja la tarea que desea realizar:")
-    print("\n1)Suma\n2)Resta\n3)Producto\n4)Division\n")
-    op = int(input("Ingrese su opcion: "))
+#Solicitud de datos a operar
+print("Por favor ingrese los valores a operar: ")
+v1 = int(input("Ingrese el primer termino: "))
+v2 = int(input("Ingrese el segundo termino: "))
+#Se pasan los parametros al constructor y parametrización de la clase "operaciones".
+term_aop = Operaciones(n1=v1, n2=v2)
 
-    while op < 1 or op > 4:
-        print("Errod de digitacion.")
-        print("Escoja la tarea que desea realizar:")
-        print("\n1)Suma\n2)Resta\n3)Producto\n4)Division\n")
-        op = int(input("Ingrese su opcion: "))
-
-    if op == 1:
-        v1 = int(input("Ingrese su primer número: "))
-        v2 = int(input("Ingrese su segundo número: "))
-        accion1 = Operaciones(n1=v1, n2=v2)
-        print(accion1.suma())
-
-    if op == 2:
-        v1 = int(input("Ingrese su primer número: "))
-        v2 = int(input("Ingrese su segundo número: "))
-        accion2 = Operaciones(n1=v1, n2=v2)
-        print(accion2.resta())
-
-    if op == 3:
-        v1 = int(input("Ingrese su primer número: "))
-        v2 = int(input("Ingrese su segundo número: "))
-        accion3 = Operaciones(n1=v1, n2=v2)
-        print(accion3.producto())
-
-    if op == 4:
-        v1 = int(input("Ingrese su primer número: "))
-        v2 = int(input("Ingrese su segundo número: "))
-        accion4 = Operaciones(n1=v1, n2=v2)
-        print(accion4.division())
-
-
+#Siclo Do-while para realizar varias tarear con los mimos operandos ingresados
 while True:
     op2 = str(input("Presione 'M' para desplegar el menu o 'F' para finalizar:"))
     if op2 == 'M' or op2 == 'm':
-        menu()
+        print("Escoja la tarea que desea realizar:")
+        print("\n1)Suma\n2)Resta\n3)Producto\n4)Division\n")
+        op = str(input(f"Ingrese su opcion: "))
+
+        #Se llamo a el metodo "ejecutar" de la clase "Operaciones".
+        ej = term_aop.ejecutar(tipo=op)
+        print(ej)
+
     if op2 == 'F' or op2 == 'f':
-        break"""
-
-"""ecu1 = Operaciones(4, 6, "resta")
-t1 = ecu1.ejecutar()
-print(t1)"""
-
-ecu1 = Operaciones(4, 6)
-t1 = ecu1.ejecutar(tipo="resta")
-print(t1)
-t2 = ecu1.ejecutar("division")
-print(t2)
-print(suma(4, 6))
-
-
+        break

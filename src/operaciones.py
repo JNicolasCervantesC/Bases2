@@ -4,6 +4,7 @@ class Operaciones:
         self.n2 = n2
 
     def ejecutar(self, tipo: str):
+
         if tipo == "suma":
             e1 = self.suma()
         if tipo == "resta":
@@ -13,7 +14,6 @@ class Operaciones:
         if tipo == "division":
             e1 = self.division()
         return e1
-
     def suma(self):
 
         if self.n1 != None and self.n2 != None:
@@ -29,30 +29,18 @@ class Operaciones:
         if self.n1 != None and self.n2 != None:
             result = self.n1 - self.n2
 
-        if self.n1 != None and self.n2 == None:
-            result = self.n1
-
-        if self.n1 == None and self.n2 != None:
-            result = (self.n2*-1)
-
-        if self.n1 == None and self.n2 == None:
+        else:
+            print("Warning")
             result = None
-
         return result
 
     def producto(self):
         if self.n1 != None and self.n2 != None:
             result = self.n1 * self.n2
 
-        if self.n1 != None and self.n2 == None:
+        else:
+            print("Warning")
             result = None
-
-        if self.n1 == None and self.n2 != None:
-            result = None
-
-        if self.n1 == None and self.n2 == None:
-            result = None
-
         return result
 
     def division(self):
@@ -63,11 +51,10 @@ class Operaciones:
 
         else:
             result = self.n1 / self.n2
-
         return result
 
 
 
-#arreglar metodos
+#arreglar metodos // check
 #unit test
 #new clas funciones
